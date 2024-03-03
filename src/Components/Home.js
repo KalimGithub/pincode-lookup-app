@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom';
+import React, { useContext, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import PostContext from "../context/PostContext";
 
 const Home = () => {
   const [pincode, setPincode] = useState("");
+  const navigate = useNavigate();
+  // const { posts, getPosts } = pincode;
+  // console.log('posts', posts)
 
-
-function handleError(){
-  alert("Enter valid Pincode");
-}
-
+  function handleError() {
+    alert("Enter valid Pincode");
+  }
 
   return (
     <div className="home">
@@ -25,11 +27,19 @@ function handleError(){
       />
       <br />
       {pincode ? (
-        <NavLink  to="./post">
-          <button id="btn">
+        // <NavLink  to="./post">
+        //   <button id="btn">
+        //   Lookup
+        // </button>
+        // </NavLink>
+        <button
+          onClick={() => {
+            navigate(`/post/${pincode}`);
+          }}
+          id="btn"
+        >
           Lookup
         </button>
-        </NavLink>
       ) : (
         <button id="btn" onClick={handleError}>
           Lookup
@@ -40,4 +50,3 @@ function handleError(){
 };
 
 export default Home;
-

@@ -32,13 +32,14 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 
-.home{
+.home {
   text-align: left;
   margin-left: 5%;
   display: flex;
@@ -46,16 +47,18 @@
   justify-content: flex-start;
   width: 90%;
 }
-.home input{
+
+.home input {
   width: 80%;
-  padding:10px;
+  padding: 10px;
   font-size: 18px;
   outline-color: royalblue;
   font-weight: 700;
   border: 2px solid;
   border-radius: 5px;
 }
-.home #btn{
+
+#btn {
   background-color: black;
   color: white;
   border: none;
@@ -64,66 +67,99 @@
   width: fit-content;
   padding: 10px 40px;
   text-decoration: none;
+  margin-bottom: 10px;
 }
-#btn:hover{
+
+#btn:hover {
   cursor: pointer;
   transform: scaleX(1.01) scaleY(1.01);
   transition: all 0.2s ease-in-out;
   box-shadow: 0px 0px 5px black;
 }
 
-.post{
+.post {
   display: flex;
   flex-direction: column;
   width: 90vw;
   margin-inline: 50px;
   text-align: left;
 }
-.container{
+
+.container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
   width: 100%;
 }
-.item{
+
+.item {
   border: 1px solid black;
   padding: 10px;
   width: 45%;
   border-radius: 10px;
   font-size: 24px;
 }
-.item:hover{
+
+.item:hover {
   box-shadow: 0px 0px 5px rgb(70, 69, 69);
   cursor: pointer;
   transform: scale(1.005);
   transition: all 0.2s ease-in-out;
 }
-.item span{
+
+.item span {
   font-weight: 700;
 }
 
-#filter-input{
+#filter-input {
   width: 80%;
-  padding:10px;
+  padding: 10px;
   font-size: 18px;
   outline-color: royalblue;
   font-weight: 700;
   border: 2px solid;
   border-radius: 5px;
   margin-bottom: 20px;
-  padding-left: 50px ;
+  padding-left: 50px;
 }
-.post span{
+
+.post span {
   font-size: 24px;
-  font-weight:700
+  font-weight: 700
 }
-.post p{
+
+.post p {
   font-size: 24px;
 }
-#glass{
+
+#glass {
   position: relative;
   right: -15px;
   top: 37px;
   font-size: 20px;
+}
+
+.loading {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 20px 50px;
+}
+
+#loader {
+  border-radius: 50%;
+  background-color: transparent;
+  border: 5px solid royalblue;
+  padding: 10px;
+  animation: spinning 0.2s linear infinite;
+}
+
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
