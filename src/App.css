@@ -143,23 +143,7 @@
 .loading {
   font-size: 24px;
   font-weight: 500;
-  margin: 20px 50px;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
 }
-
-#loader {
-  border-radius: 50%;
-  background-color: transparent;
-  border: 5px solid royalblue;
-  padding: 10px;
-  animation: spinning 0.2s linear infinite;
-}
-
-/* @keyframes spinning {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-} */
